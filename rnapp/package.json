@@ -1,0 +1,14 @@
+{
+  "name": "rnapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build":"react-native bundle --platform android --dev false --entry-file index.js --bundle-output ../app/src/main/assets/index.android.bundle --assets-dest ../app/src/main/assets/res/"
+  },
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "^0.59.0"
+  }
+}
