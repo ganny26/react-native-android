@@ -1,5 +1,7 @@
 ## React Native Android Setup on Existing App
 
+The app demonstrates how to integrate a single activity with react native view
+
 ### How to start
 
 * Open `rnapp/index.js`
@@ -27,5 +29,5 @@
  ### Further references
 
  1. https://facebook.github.io/react-native/docs/integration-with-existing-apps
- 2. https://facebook.github.io/react-native/docs/integration-with-existing-apps
+ 2. https://medium.com/mindorks/react-native-integration-with-existing-app-f2757c2e672d
  3. https://codeburst.io/integrating-react-native-into-an-existing-app-android-c27bb1b81574
