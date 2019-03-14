@@ -21,11 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ReactActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-
-            ></activity>
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".LandingActivity" />
     </application>
 
 </manifest>
