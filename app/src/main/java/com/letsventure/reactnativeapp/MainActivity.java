@@ -9,16 +9,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import com.facebook.react.ReactApplication;
+import com.facebook.react.ReactNativeHost;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,ReactApplication {
 
     private static final int OVERLAY_PERMISSION_REQ_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
-        Button reactButton = (Button) findViewById(R.id.react_button);
-        reactButton.setOnClickListener(this);
+        Button landingButton = (Button) findViewById(R.id.landing_button);
+        Button eventsButton = (Button) findViewById(R.id.events_button);
+
+        landingButton.setOnClickListener(this);
+        eventsButton.setOnClickListener(this);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (!Settings.canDrawOverlays(this)) {
@@ -45,10 +52,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         switch (v.getId()){
-            case R.id.react_button:
-                Intent intent= new Intent(getApplicationContext(), ReactActivity.class);
-              //  intent.putExtra("data", value); //pass data
+            case R.id.landing_button:
+                Intent intent= new Intent(getApplicationContext(), LandingActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.events_button:
+                Intent mainIntent= new Intent(getApplicationContext(), EventsActivity.class);
+                startActivity(mainIntent);
+                break;
         }
+    }
+
+    @Override
+    public ReactNativeHost getReactNativeHost() {
+        return null;
     }
 }
