@@ -48,6 +48,10 @@ appcenter codepush deployment list --displayKeys
 ```bash
 code-push release-react <your_project> android
 
+(or)
+
+appcenter codepush release-react -a <your_project> -d Staging
+
 ```
 
 ### How to release
@@ -55,6 +59,9 @@ code-push release-react <your_project> android
  * `yarn build` will generate bundle on `src/main/assets/index.android.bundle`
  * Then build signed APK
 
+## Release OTA using Azure
+
+https://docs.microsoft.com/en-us/appcenter/distribution/codepush/cli
 
  ### Further references
 
