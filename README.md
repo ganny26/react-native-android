@@ -41,6 +41,7 @@ appcenter apps set-current <your_project>
 ```bash
 appcenter codepush deployment add -a <your_project> Staging
 appcenter codepush deployment list --displayKeys
+```
 
 4. To upload `index.js` bundle 
 
@@ -49,7 +50,6 @@ code-push release-react <your_project> android
 
 ```
 
-```
 ### How to release
 
  * `yarn build` will generate bundle on `src/main/assets/index.android.bundle`
