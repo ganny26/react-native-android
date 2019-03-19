@@ -5,10 +5,17 @@
   "license": "MIT",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "build":"react-native bundle --platform android --dev false --entry-file index.js --bundle-output ../app/src/main/assets/index.android.bundle --assets-dest ../app/src/main/assets/res/"
+    "build": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output ../app/src/main/assets/index.android.bundle --assets-dest ../app/src/main/assets/res/"
   },
   "dependencies": {
+    "appcenter": "^1.12.2",
+    "appcenter-analytics": "^1.12.2",
+    "appcenter-crashes": "^1.12.2",
+    "appcenter-push": "^1.12.2",
     "react": "16.8.3",
-    "react-native": "^0.59.0"
+    "react-native": "0.59.1",
+    "react-native-code-push": "^5.6.0",
+    "react-native-paper": "^2.13.0",
+    "react-native-vector-icons": "^6.4.1"
   }
 }

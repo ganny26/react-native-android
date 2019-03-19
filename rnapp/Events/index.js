@@ -1,5 +1,6 @@
 import React,{Component,useState} from 'react';
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import MyList from '../Components/MyList';
 
 function MyButton(props){
   return(
@@ -14,8 +15,9 @@ class Events extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.hello}>Events Screen From React Native</Text>
-        <MyButton>Navigate</MyButton>
+      <MyList/>
+        {/* <Text style={styles.hello}>Events Screen From React Native</Text>
+        <MyButton>Navigate</MyButton> */}
       </View>
     );
   }
@@ -23,9 +25,7 @@ class Events extends Component {
 var styles = StyleSheet.create({
   container: {
     backgroundColor: '#ccc',
-    flex: 1,
-    alignItems:'center',
-    justifyContent: 'center',
+    flex: 1
   },
   hello: {
     fontWeight: 'bold',
