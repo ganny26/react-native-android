@@ -1,5 +1,5 @@
 import React from "react";
-import {AppRegistry, StyleSheet, Text, View, Button} from "react-native";
+import {AppRegistry, StyleSheet, Text, View, Button, NativeModules} from "react-native";
 import CodePush from "react-native-code-push";
 function TextView(props) {
   return <Text style={styles.hello}>{props.children}</Text>;
@@ -41,18 +41,20 @@ class Landing extends React.Component {
     );
   };
 
-  handleClick = e => {
-    console.log("clicked");
-    this.setState({
-      message: "Handle Updated"
-    });
+  handleToast = e => {
+    NativeModules.ToastExample.show("Awesome you have call native module", NativeModules.ToastExample.SHORT);
+  };
+
+  handleNavigate = () => {
+    NativeModules.ActivityStarter.navigateToExample();
   };
   render() {
     return (
       <View style={styles.container}>
-        <TextView>Changes are pushed</TextView>
+        <TextView>Changes are pushed Dude</TextView>
         <View style={styles.buttonPrimary}>
-          <Button title="Reload" onPress={this.handleClick} />
+          <Button title="Call Native Toast Module" onPress={this.handleToast} />
+          <Button title="Navigate Native Activity" onPress={this.handleNavigate} />
           <TextView>{JSON.stringify(this.state.logs)}</TextView>
         </View>
       </View>
