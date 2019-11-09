@@ -1,6 +1,6 @@
 ## React Native Android Setup on Existing App
 
-The app demonstrates how to integrate a single activity with react native view
+This app demonstrates how to integrate a single activity with react native view
 
 ### How to start
 
