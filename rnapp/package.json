@@ -13,7 +13,7 @@
     "appcenter-crashes": "^1.12.2",
     "appcenter-push": "^1.12.2",
     "react": "16.8.3",
-    "react-native": "0.59.1",
+    "react-native": "0.62.3",
     "react-native-code-push": "^5.6.0",
     "react-native-paper": "^2.13.0",
     "react-native-vector-icons": "^6.4.1"
